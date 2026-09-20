@@ -8,6 +8,14 @@
     src: url("../assets/fonts/fraunces/Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf") format("truetype");
 }
 @font-face {
+      font-family: "LetraCursiva";
+    src: url("../assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf") format("truetype");
+}
+@font-face {
+      font-family: "LetraMono2";
+    src: url("../assets/fonts/dm-mono/DMMono-Regular.ttf") format("truetype");
+}
+@font-face {
       font-family: "LetraCAR";
     src: url("../assets/fonts/dm-sans/DMSans-VariableFont_opsz\,wght.ttf") format("truetype");
 }
@@ -22,7 +30,7 @@
 }
 
 .sidebar {
-    width: 10%;
+    width: 15%;
     min-height: 100vh;
     padding: 18px 15px;
     display: flex;
@@ -53,12 +61,9 @@
 .notification {
     background-color: #c94a1f;
     color: white;
-
     width: 16px;
     height: 16px;
-
     border-radius: 50%;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,7 +129,16 @@
     padding: 1rem 0.8rem 1rem 0.7rem;
     margin-bottom: 1rem;
     height: 7rem;
-     box-shadow: 0 3px 8px rgba(190, 130, 20, 0.25);
+    box-shadow: 0 3px 8px rgba(190, 130, 20, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+.iconweather{
+    position: absolute;
+    top: -20px;
+    right: -8px;
+    width: 75px;
+    height: 75px;
 }
 
 .climatoday{
@@ -132,6 +146,7 @@
     font-family: "LetraeMenuNavegacion", sans-serif;
     padding: 0.2rem;
 }
+
 .descripcionclima{
     font-size: 13px;
     font-family: "LetraCAR";
@@ -157,8 +172,536 @@
 }
 
 body {
-    background-color: hsl(33, 58%, 96%);
+    margin: 0;
+    display: flex;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    background-color: hsl(33, 58%, 96%);
     overflow: hidden;
+}
+
+
+.contenido {
+    flex: 1;
+    height: 100vh;
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.encabezado {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.booking {
+    margin: 0 0 0.2rem 0;
+    font-family: "LetraeMenuNavegacion", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.12rem;
+    color: #8b8379;
+}
+
+.bienvenida h1 {
+    margin: 0;
+    font-family: "LetraCursiva", serif;
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: #29251f;
+}
+
+.bienvenida h1 span {
+    color: #b64a29;
+    font-family: "Letragrados", serif;
+}
+
+.botones {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.printreceipt,
+.addtocalendar {
+    padding: 0.7rem 1.2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.printreceipt {
+    background-color: transparent;
+    border: 1px solid #d8d2ca;
+    color: #3f3a34;
+}
+
+.addtocalendar{
+    background-color: #29251f;
+    border: 1px solid #29251f;
+    color: white;
+}
+
+.tarjetas {
+
+    width: 900px;
+    height: 520px;
+    position: relative;
+    margin: 8rem auto 0 auto;
+    flex-shrink: 0;
+
+}
+
+.recibo {
+    position: absolute;
+    width: 450px;
+    height: 500px;
+    left: -50px;
+    top: 20px;
+    background-color: #fffefa;
+    padding: 2.1rem 1.8rem 1.8rem 1.8rem;
+    border-radius: 12px;
+    transform: rotate(-4deg);
+    box-shadow: 0 12px 25px rgba(81, 62, 46, 0.13);
+    z-index: 1;
+}
+
+.reciboencabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.recibotexto {
+    margin: 0 0 0.35rem 0;
+    font-family: "LetraeMenuNavegacion", sans-serif;
+    font-size: 0.45rem;
+    letter-spacing: 0.14rem;
+    color: #928a80;
+}
+
+.recibo h2 {
+    margin: 0;
+    font-family: "LetraCursiva", serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #22201d;
+}
+
+.numerorecibo {
+    margin: 0;
+    text-align: right;
+    line-height: 1.45;
+    font-family: "LetraeMenuNavegacion", sans-serif;
+    font-size: 0.45rem;
+    letter-spacing: 0.04rem;
+    color: #928a80;
+}
+
+.linearecibo {
+    width: 100%;
+    border-top: 1px dashed #ddd6cf;
+    margin: 0.85rem 0;
+    padding-bottom: 10px;
+}
+
+.fechas {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 0.2rem;
+}
+
+.fecha {
+    width: 48%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.fecha p {
+    margin: 0 0 0.3rem 0;
+    font-family: "LetraeMenuNavegacion", sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.08rem;
+    color: #968d82;
+}
+
+.fecha h3 {
+    margin: 0 0 0.2rem 0;
+    font-family: "LetraCursiva", serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #23211d;
+}
+
+.fecha span {
+    font-family: "LetraCAR", sans-serif;
+    font-size: 0.8rem;
+    color: #7e776f;
+}
+
+.productosrecibo {
+    margin-top: 0.3rem;
+}
+
+.productosrecibo div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.45rem;
+    font-family: "LetraCAR", sans-serif;
+    font-size: 1rem;
+    color: #35312c;
+    padding-bottom: 2px;
+}
+
+
+.totalrecibo {
+    margin-top: 1rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid #7a736b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.totalrecibo p {
+    margin: 0;
+    font-family: "LetraeMenuNavegacion", sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.18rem;
+    color: #8f887f;
+}
+
+.totalrecibo h3 {
+    margin: 0;
+    font-family: "LetraCursiva", serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #1f1c19;
+}
+
+.piederecibo {
+    position: absolute;
+    left: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.pagado {
+    font-family: "LetraeMenuNavegacion", sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.16rem;
+    color: #8f887f;
+}
+
+.barcodeimg {
+    width: 110px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+.tarjetabienvenida {
+    position: absolute;
+    width: 450px;
+    height: 500px;
+    right: 60px;
+    top: 15px;
+    padding: 1.8rem;
+    border-radius: 16px;
+    background: linear-gradient(60deg, #963005, #f76f46);
+    color: white;
+    transform: rotate(4deg);
+    box-shadow: 0 20px 33px rgba(174, 67, 29, 0.25);
+    z-index: 2;
+}
+
+.tarjetabienvenida::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 22px;
+    right: 22px;
+    border-top: 1px dashed rgba(255, 215, 160, 0.30);
+}
+
+.welcomecard {
+    margin: 0;
+    font-family: "LetraCar", sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.14rem;
+    color: #fff1d1;
+}
+
+
+.solbienvenida{
+    position: absolute;
+    top: 42px;
+    right: 24px;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.mensajebienvenida {
+    margin-top: 4.5rem;
+    max-width: auto;
+}
+
+.mensajebienvenida p {
+    margin: 0;
+    font-family: "Letragrados", serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #f8d06c;
+    
+}
+
+.mensajebienvenida h2 {
+    margin: 0.25rem 0 1.1rem 0;
+    font-family: "Letragrados", serif;
+    font-size: 2.7rem;
+    font-weight: 400;
+    line-height: 0.95;
+    color: #fff6e7;
+    padding-top: 0.5rem;
+}
+
+.mensajebienvenida span {
+    display: block;
+    max-width: auto;
+    font-family: "LetraCAR", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #fff1e3;
+    padding-top: 0.5rem;
+}
+
+.room {
+    position: absolute;
+    left: 1.5rem;
+    bottom: 1.4rem;
+}
+
+.room p {
+    margin: 0 0 0.3rem 0;
+    font-family: "LetraCAR", sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.12rem;
+    color: #ffe7c6;
+}
+
+.room h3 {
+    margin: 0;
+    font-family: "LetraCursiva", serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #fff6e9;
+}
+
+.hovertofan {
+    margin: 0.9rem auto 0 auto;
+    text-align: center;
+    font-family: "LetraeMenuNavegacion", sans-serif;
+    font-size: 0.5rem;
+    letter-spacing: 0.12rem;
+    color: #a38e7f;
+}
+
+.hovertofan span {
+    color: #cb5d28;
+    margin: 0 0.35rem;
+}
+
+
+.tarjetasinformacion {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: auto auto 2rem auto;
+}
+
+.cartarrival,
+.cartawifi,
+.cartadesayuno {
+    width: 100%;
+    height: 300px;
+    padding: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.55);
+    border: 1px solid #ded9d1;
+    border-radius: 12px;
+}
+
+.cardtop {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+}
+
+.cardtop p {
+    margin: 0;
+    font-family: "LetraeMenuNavegacion", sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.12rem;
+    font-weight: bold;
+}
+
+.numero {
+    margin-left: auto;
+    font-family: "Letragrados", serif;
+    font-size: 1.6rem;
+}
+
+.arrivalicon,
+.wifiicon,
+.breakfasticon {
+    width: 38px;
+    height: 38px;
+    padding: 9px;
+    border-radius: 7px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.arrivalicon {
+    background-color: #c94a1f;
+}
+
+.wifiicon {
+    background-color: #596fd4;
+}
+
+.breakfasticon {
+    background-color: #c84a76;
+}
+
+
+.cartarrival .cardtop p,
+.cartarrival .numero {
+    color: #b64624;
+}
+
+.cartawifi .cardtop p,
+.cartawifi .numero {
+    color: #596fd4;
+}
+
+.cartadesayuno .cardtop p,
+.cartadesayuno .numero {
+    color: #c84a76;
+}
+
+.cartarrival h2,
+.cartawifi h2,
+.cartadesayuno h2 {
+    margin: 0 0 0.5rem 0;
+    font-family: "LetraCursiva", serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+
+    color: #29251f;
+}
+
+.subtitulo {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-size: 0.8rem;
+    color: #938c83;
+    font-family: "LetraCar", sans-serif;
+}
+
+.descripcioncarta {
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: #6d675f;
+    font-family: "LetraMono2", sans-serif;
+}
+.wifiinfo {
+    min-height: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 0.6rem;
+    margin-top: 0.35rem;
+    background-color: #f0ede8;
+    border-radius: 5px;
+}
+
+.wifiinfo span {
+    font-family: "LetraeMenuNavegacion", sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    color: #989187;
+    font-family: "LetraMono2", sans-serif;
+}
+
+.wifiinfo p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #5c5852;
+    font-family: "LetraMono2", sans-serif;
+}
+
+.yourstay,
+.thehouse,
+.aroundtown,
+.breakfast,
+.mensajes {
+border: 1px solid transparent;
+transition: border-color 0.25s ease, background-color 0.25s ease, transform 0.15s ease;
+cursor: pointer;
+}
+
+
+.yourstay:hover,
+.thehouse:hover,
+.aroundtown:hover,
+.breakfast:hover,
+.mensajes:hover {
+    background-color: white;
+    border-color: #b94b25;
+}
+
+
+.yourstay:active,
+.thehouse:active,
+.aroundtown:active,
+.breakfast:active,
+.mensajes:active {
+    transform: scale(0.97);
+}
+
+.printreceipt {
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.15s ease;
+}
+
+.printreceipt:hover {
+    border-color: #b94b25;
+    box-shadow: 0 0 0 1px #b94b25;
+}
+
+.printreceipt:active {
+    transform: scale(0.96);
+}
+
+.addtocalendar {
+transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.15s ease;
+}
+
+.addtocalendar:hover {
+    border-color: #b94b25;
+    box-shadow: 0 0 0 2px #f7f2eb, 0 0 0 3px #b94b25;
+}
+
+.addtocalendar:active {
+    transform: scale(0.96);
 }

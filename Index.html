@@ -6,72 +6,237 @@
     <title>Maison Soleil</title>
     <link rel="stylesheet" href="CSS/style.css">
 </head>
-<div class="sidebar">
-        <div class="logo">
-            <img src="assets/images/logo.svg" alt="Logo">
-        </div>
-            <div class="textologo"></div>
-    <div nav class="navbar">
-        <ul class="linksmenu">
-            <div class="yourstay"> 
-                <div class="menuopcion">
-                    <img src="assets/images/icon-bed.svg" alt="Logo">
-                    <a href="#"> Your stay</a>
-                </div>
-                <span class="notification">1</span>
-            </div>
-            <div class="thehouse">
-                <div class="menuopcion"> 
-                    <img src="assets/images/icon-house.svg" alt="Logo">
-                    <a href="#">The House</a>
-                </div>
-            </div>
-            <div class="aroundtown"> 
-                <div class="menuopcion"> 
-                    <img src="assets/images/icon-pin.svg" alt="Logo">
-                    <a href="#">Around Town</a>
-                </div>
-            </div>
-            <div class="breakfast"> 
-                 <div class="menuopcion">
-                    <img src="assets/images/icon-breakfast-outline.svg" alt="Logo">
-                    <a href="#">Breakfast</a>
-                 </div>
-            </div>
-            <div class="mensajes"> 
-                 <div class="menuopcion">
-                    <img src="assets/images/icon-mail.svg" alt="Logo">
-                    <a href="#">messages</a>
-                 </div>
-            </div>
-        </ul>
-    </div>
-
-    <div class="sidebarbottom">
-
-            <div class="clima">
-                <div class="climatoday">TODAY IN CASSIS</div>
-                <div class="grados">27°</div>
-                <div class="descripcionclima">
-                    Sunny · light breeze
-                </div>
-            </div>
-
-            <div class="footersidebar">
-                <p>EST. 1987</p>
-                <p>MAISON SOLEIL · 12 RUE DES</p>
-                <p>OLIVIERS · CASSIS</p>
-                <p>© 2026 MAISON SOLEIL</p>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-<main>
-
-</main>
 <body>
-    
+    <div class="sidebar">
+            <div class="logo">
+                <img src="assets/images/logo.svg" alt="Logo">
+            </div>
+                <div class="textologo"></div>
+        <div class="navbar">
+            <ul class="linksmenu">
+                <div class="yourstay"> 
+                    <div class="menuopcion">
+                        <img src="assets/images/icon-bed.svg" alt="Logo">
+                        <a href="#"> Your stay</a>
+                    </div>
+                    <span class="notification">1</span>
+                </div>
+                <div class="thehouse">
+                    <div class="menuopcion"> 
+                        <img src="assets/images/icon-house.svg" alt="Logo">
+                        <a href="#">The House</a>
+                    </div>
+                </div>
+                <div class="aroundtown"> 
+                    <div class="menuopcion"> 
+                        <img src="assets/images/icon-pin.svg" alt="Logo">
+                        <a href="#">Around Town</a>
+                    </div>
+                </div>
+                <div class="breakfast"> 
+                    <div class="menuopcion">
+                        <img src="assets/images/icon-breakfast-outline.svg" alt="Logo">
+                        <a href="#">Breakfast</a>
+                    </div>
+                </div>
+                <div class="mensajes"> 
+                    <div class="menuopcion">
+                        <img src="assets/images/icon-mail.svg" alt="Logo">
+                        <a href="#">Messages</a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+
+        <div class="sidebarbottom">
+
+                <div class="clima">
+                    <div class="climatoday">TODAY IN CASSIS</div>
+                    <img src="assets/images/icon-weather.svg" alt="Logo" class="iconweather">
+                    <div class="grados">27°</div>
+                    <div class="descripcionclima">
+                        Sunny · light breeze
+                    </div>
+                </div>
+
+                <div class="footersidebar">
+                    <p>EST. 1987</p>
+                    <p>MAISON SOLEIL · 12 RUE DES</p>
+                    <p>OLIVIERS · CASSIS</p>
+                    <p>© 2026 MAISON SOLEIL</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <main class="contenido">
+       
+        <div class="encabezado">
+
+            <div class="bienvenida">
+                <p class="booking">BOOKING · CONFIRMED</p>
+                <h1>
+                    Bienvenue, <span>Lucia.</span>
+                </h1>
+            </div>
+            <div class="botones">
+                <button class="printreceipt">
+                    Print receipt
+                </button>
+                <button class="addtocalendar">
+                    Add to calendar
+                </button>
+            </div>
+        </div>
+
+        <div class="tarjetas">      
+            <div class="recibo">
+                <div class="reciboencabezado">
+                    <div>
+                        <p class="recibotexto">RECEIPT</p>
+                        <h2>Your stay</h2>
+                    </div>
+
+                    <p class="numerorecibo">
+                        N° MS-2026<br>
+                        0421-AH
+                    </p>
+                </div>
+
+                <div class="linearecibo"></div>
+
+
+                <div class="fechas">
+
+                    <div class="fecha">
+                        <p>CHECK IN</p>
+                        <h3>25 Apr</h3>
+                        <span>Saturday · 15:00</span>
+                    </div>
+
+                    <div class="fecha">
+                        <p>CHECK OUT</p>
+                        <h3>29 Apr</h3>
+                        <span>Wednesday · 11:00</span>
+                    </div>
+
+                </div>
+                <div class="linearecibo"></div>
+                <div class="productosrecibo">
+
+                    <div>
+                        <span>Room · La Garrigue x 4 nights</span>
+                        <span>€ 620.00</span>
+                    </div>
+
+                    <div>
+                        <span>Breakfast x 2 guests</span>
+                        <span>€ 96.00</span>
+                    </div>
+
+                    <div>
+                        <span>Tourist tax</span>
+                        <span>€ 14.40</span>
+                    </div>
+
+                </div>
+
+
+                <div class="totalrecibo">
+
+                    <p>TOTAL PAID</p>
+
+                    <h3>€ 730.40</h3>
+
+                </div>
+                
+                <div class="piederecibo">
+                    <span class="pagado">
+                        PAID · WISE · GBP
+                    </span>
+                    <img src="assets/images/icon-barcode.svg" alt="Código de barras" class="barcodeimg" >
+                </div>
+
+            </div>
+
+            <div class="tarjetabienvenida">
+
+                <p class="welcomecard">WELCOME CARD</p>
+
+                <img src="assets/images/icon-sun.svg" alt="Sol" class="solbienvenida">
+                <div class="mensajebienvenida">
+                    <p>A note from your host,</p>
+                    <h2>Margaux.</h2>
+                    <span> We're so glad you're coming. The shutters will be open, the lemonade cold, and the cat — Poivre — pretending not to notice you.</span>
+                </div>
+
+                <div class="room">
+                    <p>ROOM</p>
+                    <h3>La Garrigue</h3>
+                </div>
+
+            </div>        
+        </div>
+
+        <div class="tarjetasinformacion">
+
+            <div class="cartarrival">
+                <div class="cardtop">
+                    <img src="assets/images/icon-key.svg" alt="Llegada" class="arrivalicon">
+                    <p>ARRIVAL</p>
+                    <span class="numero">01</span>
+                </div>
+                <h2>Check-in from 15:00</h2>
+
+                <span class="subtitulo">
+                    Sat, 25 April
+                </span>
+                <p class="descripcioncarta">  Ring the brass bell by the blue door.  If we're at the market, the key is in the terracotta pot by the olive tree.</p>
+            </div>
+
+            <div class="cartawifi">
+                <div class="cardtop">
+                    <img src="assets/images/icon-wifi.svg" alt="Sol" class="wifiicon">
+                    <p>WIFI</p>
+                    <span class="numero">02</span>
+                </div>
+                <h2>Le Soleil · Guest</h2>
+                <span class="subtitulo">
+                    Password below
+                </span>
+
+                <div class="wifiinfo">
+                    <span>NETWORK</span>
+                    <p>Le Soleil · Guest</p>
+                </div>
+
+                <div class="wifiinfo">
+                    <span>PASSWORD</span>
+                    <p>soleil-2026</p>
+                </div>
+
+            </div>
+
+
+            <div class="cartadesayuno">
+                <div class="cardtop">
+                    <img src="assets/images/icon-breakfast.svg" alt="Desayuno" class="breakfasticon">
+                    <p>BREAKFAST</p>
+                    <span class="numero">03</span>
+                </div>
+                <h2>Served 8 - 10:30</h2>
+                
+                <span class="subtitulo">
+                    On the terrace
+                </span>
+
+                <p class="descripcioncarta"> Fresh figs, Marseille honey, pain au levain and espresso. Gluten-free option? Leave a note the night before. </p>
+
+            </div>
+
+        </div>
+    </main>
+
 </body>
 </html>
