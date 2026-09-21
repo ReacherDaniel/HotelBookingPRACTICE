@@ -722,7 +722,6 @@ transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.15s ease
         width: 750px;
         transform: scale(0.85);
         transform-origin: top center;
-
         margin-top: 5rem;
         margin-bottom: -70px;
     }
@@ -743,7 +742,6 @@ transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.15s ease
     body {
         display: block;
         height: auto;
-
         overflow-x: hidden;
         overflow-y: auto;
     }
@@ -753,9 +751,7 @@ transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.15s ease
     .sidebar {
         width: 100%;
         min-height: auto;
-
         padding: 1rem;
-
         border-right: none;
         border-bottom: 1px solid #ded8cf;
     }
@@ -772,13 +768,9 @@ transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.15s ease
 
     .linksmenu {
         display: flex;
-
         gap: 0.5rem;
-
         width: 100%;
-
         overflow-x: auto;
-
         padding-bottom: 0.3rem;
     }
 
@@ -789,9 +781,7 @@ transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.15s ease
     .mensajes {
         width: auto;
         min-width: max-content;
-
         flex-shrink: 0;
-
         padding: 0.6rem 0.8rem;
     }
 
